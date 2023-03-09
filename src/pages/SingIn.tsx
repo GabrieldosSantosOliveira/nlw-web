@@ -1,5 +1,6 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
+import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -27,6 +28,9 @@ export default function SingIn() {
   });
   return (
     <div className="flex flex-1 h-screen justify-center items-center">
+      <Head>
+        <title>Cadastro</title>
+      </Head>
       <button
         onClick={() => login()}
         disabled={isLoading}

@@ -1,5 +1,6 @@
 import Cookies from 'js-cookie';
 import { GetServerSideProps, GetStaticProps } from 'next';
+import Head from 'next/head';
 import Image from 'next/image';
 import { FormEvent, useState } from 'react';
 
@@ -42,6 +43,9 @@ export default function Home({
   };
   return (
     <div className="max-w-[1124px] mx-auto h-screen grid p-8 grid-flow-row lg:grid-flow-col gap-28 items-center">
+      <Head>
+        <title>Tela Inicial</title>
+      </Head>
       <main>
         <Image src={logoImg} alt="NLW Copa" />
         <h1 className="mt-14 text-white text-5xl font-bold leading-tight">

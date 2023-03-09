@@ -21,6 +21,11 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="favicon.ico"
+        />
       </Head>
       <body className="bg-gray-900 bg-app bg-no-repeat bg-cover">
         <Main />
