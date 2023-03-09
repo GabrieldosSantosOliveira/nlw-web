@@ -64,7 +64,7 @@ export default function Home({
         </div>
         <form
           onSubmit={createPool}
-          className="mt-10 flex gap-2"
+          className="mt-10 flex gap-2 flex-col lg:flex-row"
         >
           <input
             type="text"
@@ -114,7 +114,7 @@ export default function Home({
         src={appPreviewImg}
         alt="Dois celulares exibindo uma previa da aplicação móvel"
         quality={100}
-        className="m-auto h-full justify-center center items-center object-contain"
+        className="lg:flex hidden m-auto h-full justify-center center items-center object-contain"
       />
     </div>
   );
