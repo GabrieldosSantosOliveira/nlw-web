@@ -1,4 +1,5 @@
-import { GetServerSideProps } from 'next';
+import Cookies from 'js-cookie';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import Image from 'next/image';
 import { FormEvent, useState } from 'react';
 
@@ -7,6 +8,7 @@ import logoImg from '../assets/logo.svg';
 import { api } from '../lib/axios';
 import iconsCheckImg from './../assets/icon-check.svg';
 import usersAvatarExampleImg from './../assets/users-avatar-example.png';
+import { withAuth } from './../auth/withAuth';
 interface HomeProps {
   poolsCount: number;
   guessesCount: number;
@@ -21,6 +23,10 @@ export default function Home({
   const createPool = async (event: FormEvent) => {
     event.preventDefault();
     try {
+      const token = Cookies.get('get');
+      api.defaults.headers.common[
+        'Authorization'
+      ] = `Bearer ${token}`;
       const response = await api.post('/pools', {
         title: poolTitle
       });
@@ -35,7 +41,7 @@ export default function Home({
     }
   };
   return (
-    <div className="max-w-[1124px] mx-auto h-screen grid grid-cols-2 gap-28 items-center">
+    <div className="max-w-[1124px] mx-auto h-screen grid p-8 grid-flow-row lg:grid-flow-col gap-28 items-center">
       <main>
         <Image src={logoImg} alt="NLW Copa" />
         <h1 className="mt-14 text-white text-5xl font-bold leading-tight">
@@ -104,26 +110,27 @@ export default function Home({
         src={appPreviewImg}
         alt="Dois celulares exibindo uma previa da aplicação móvel"
         quality={100}
+        className="m-auto h-full justify-center center items-center object-contain"
       />
     </div>
   );
 }
-export const getServerSideProps: GetServerSideProps =
-  async () => {
-    const [
-      poolsCountResponse,
-      guessesCountResponse,
-      userCountResponse
-    ] = await Promise.all([
-      api.get('pools/count'),
-      api.get('guesses/count'),
-      api.get('users/count')
-    ]);
-    return {
-      props: {
-        poolsCount: poolsCountResponse.data.count,
-        guessesCount: guessesCountResponse.data.count,
-        userCount: userCountResponse.data.count
-      }
-    };
+
+export const getServerSideProps = withAuth(async () => {
+  const [
+    poolsCountResponse,
+    guessesCountResponse,
+    userCountResponse
+  ] = await Promise.all([
+    api.get('pools/count'),
+    api.get('guesses/count'),
+    api.get('users/count')
+  ]);
+  return {
+    props: {
+      poolsCount: poolsCountResponse.data.count,
+      guessesCount: guessesCountResponse.data.count,
+      userCount: userCountResponse.data.count
+    }
   };
+});
