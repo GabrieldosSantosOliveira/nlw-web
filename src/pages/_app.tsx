@@ -3,15 +3,10 @@ import type { AppProps } from 'next/app';
 
 import './../styles/globals.css';
 
-export default function App({
-  Component,
-  pageProps
-}: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <GoogleOAuthProvider
-      clientId={
-        process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ''
-      }
+      clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ''}
     >
       <Component {...pageProps} />
     </GoogleOAuthProvider>

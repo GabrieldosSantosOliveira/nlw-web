@@ -11,11 +11,11 @@ export default function SingIn() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const login = useGoogleLogin({
-    onSuccess: async value => {
+    onSuccess: async (value) => {
       try {
         setIsLoading(true);
         const { data } = await api.post('/users', {
-          access_token: value.access_token
+          access_token: value.access_token,
         });
         Cookies.set('token', data.token, { expires: 7 });
         router.push('/');
@@ -24,7 +24,7 @@ export default function SingIn() {
       } finally {
         setIsLoading(false);
       }
-    }
+    },
   });
   return (
     <div className="flex flex-1 h-screen justify-center items-center">
