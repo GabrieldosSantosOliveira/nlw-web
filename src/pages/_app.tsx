@@ -8,7 +8,11 @@ export default function App({
   pageProps
 }: AppProps) {
   return (
-    <GoogleOAuthProvider clientId="288331783256-uf91vha3b4rcmq812rd9a7ikpgqsvfvc.apps.googleusercontent.com">
+    <GoogleOAuthProvider
+      clientId={
+        process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ''
+      }
+    >
       <Component {...pageProps} />
     </GoogleOAuthProvider>
   );
