@@ -80,7 +80,7 @@ export default function Home({
           Após criar o seu bolão, você receberá um código único que poderá usar
           para convidar outas pessoas
         </p>
-        <div className="mt-10 p-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
+        <div className="flex-col sm:flex-row sm:p-10 sm:gap-0 gap-6 mt-10 py-10 border-t border-gray-600 flex items-center justify-between text-gray-100">
           <div className="flex items-center gap-6">
             <Image src={iconsCheckImg} alt="" />
             <div className="flex flex-col">
@@ -88,7 +88,7 @@ export default function Home({
               <span>Bolões criados</span>
             </div>
           </div>
-          <div className="w-px h-14 bg-gray-600" />
+          <div className="bg-gray-600 w-full h-px sm:w-px sm:h-14 " />
           <div className="flex items-center gap-6">
             <Image src={iconsCheckImg} alt="" />
             <div className="flex flex-col">
