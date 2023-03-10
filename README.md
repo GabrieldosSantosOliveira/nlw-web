@@ -11,7 +11,14 @@ Esta aplicação foi desenvolvida durante a nlw da copa da rocketseat, esta apli
 
 ## 🔖 Demonstração
 ### 💻 Desktop
+
 https://user-images.githubusercontent.com/86084272/224195557-c80c25f5-4c22-45a1-9963-233d6740c6c9.mp4
+
+### <p> <img width="30px" src="https://user-images.githubusercontent.com/86084272/224203062-76d1fb6a-cb9c-4adb-bb2a-f1ea11f7611e.svg"/> Tablet </p>
+<p align="center">
+<img width="600px" src="https://user-images.githubusercontent.com/86084272/224200828-6051ffb4-a644-448f-aa77-3b991d4b9167.png"/>
+</p>
+
 ### 📱SmartPhone
 
 https://user-images.githubusercontent.com/86084272/224198130-3283d702-19a2-4f2a-824a-1608e96d0713.mp4
