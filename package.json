@@ -2,6 +2,8 @@
   "name": "nlw-web",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Gabriel dos Santos Oliveira <gabrielsantosoliveira951@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
