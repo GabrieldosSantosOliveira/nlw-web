@@ -1,7 +1,7 @@
 <p align="center">
 <img width="150px" src="https://user-images.githubusercontent.com/86084272/224195803-f7b8f061-7a5e-45b1-a189-9ee464017a2b.png"/> </p>
 
- ## <p align="center"> GithubSearch <a href="LICENSE"> <img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=&labelColor=202024" alt="License"></a> </p>
+ ## <p align="center"> NLW Copa Web <a href="LICENSE"> <img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=&labelColor=202024" alt="License"></a> </p>
 Esta aplicação foi desenvolvida durante a nlw da copa da rocketseat, esta aplicação tendo como foco poder realizar a criação de boletos 
 
 ## ➕ Incrementos
