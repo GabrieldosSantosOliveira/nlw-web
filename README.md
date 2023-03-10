@@ -3,7 +3,7 @@
 
 ## <p align="center"> NLW Copa Mobile <a href="LICENSE"> <img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=&labelColor=202024" alt="License"></a> </p>
 
-Esta aplicação foi desenvolvida durante a nlw da copa da rocketseat, esta aplicação tendo como foco poder realizar a criação de boletos
+Esta aplicação foi desenvolvida durante a nlw da copa da rocketseat, esta aplicação tendo como foco poder realizar a criação de bolões
 
 ## ➕ Incrementos
 
