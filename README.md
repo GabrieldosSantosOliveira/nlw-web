@@ -12,6 +12,9 @@ Esta aplicação foi desenvolvida durante a nlw da copa da rocketseat, esta apli
 ## 🔖 Demonstração
 ### 💻 Desktop
 https://user-images.githubusercontent.com/86084272/224195557-c80c25f5-4c22-45a1-9963-233d6740c6c9.mp4
+### 📱SmartPhone
+
+https://user-images.githubusercontent.com/86084272/224198130-3283d702-19a2-4f2a-824a-1608e96d0713.mp4
 
 ## 🛠️ Tecnologias
 - [TypeScript](https://www.typescriptlang.org/) 
